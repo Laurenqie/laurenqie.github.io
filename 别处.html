@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
     
-  一可茶馆
+  别处 - 一可茶馆
   
   </title>
   
@@ -102,14 +102,14 @@
 		<div class="markdown-body home-categories">
 		
 			<div class="article">
-                <a class="clearlink" href="15646523637889.html">
+                <a class="clearlink" href="15646510016660.html">
                 
-                  <h1>test</h1>
+                  <h1>bbb</h1>
                   <div class="a-content">
                       
                       <div class="a-content-text">
                         
-                        	<p>test</p>
+                        	<p>bbb</p>
 
                         
                       </div>
@@ -118,224 +118,10 @@
                 <div class="read-more clearfix">
                   <div class="more-left left">
                   
-                    <span class="date">2019/08/01</span>
-                    
-          				   
-                  </div>
-                  <div class="more-right right">
-                  <span class="comments">
-                      
-
-                       
-                  </span>
-                  </div>
-                </div>
-              </div><!-- article -->
-        
-			<div class="article">
-                <a class="clearlink" href="15646509986124.html">
-                
-                  <h1>aaa</h1>
-                  <div class="a-content">
-                      
-                      <div class="a-content-text">
-                        
-                        	<p>aaa</p>
-
-                        
-                      </div>
-                  </div>
-                </a>
-                <div class="read-more clearfix">
-                  <div class="more-left left">
-                  
-                    <span class="date">2019/08/01</span>
-                    
-          				   
-                  </div>
-                  <div class="more-right right">
-                  <span class="comments">
-                      
-
-                       
-                  </span>
-                  </div>
-                </div>
-              </div><!-- article -->
-        
-			<div class="article">
-                <a class="clearlink" href="15646513520820.html">
-                
-                  <h1>Hexo使用手册(1) 使用Github Pages搭建Hexo博客</h1>
-                  <div class="a-content">
-                      
-                      <div class="a-content-text">
-                        
-                        	<p>为了安装Hexo，你需要拥有Git Command Line tools、Github账号、NVM和Node.js.</p>
-
-<h1 id="toc_0">安装Hexo</h1>
-
-<h2 id="toc_1">git</h2>
-
-<p>Mac用户可以考虑使用Github Desktop或者Xcode自带的Git。</p>
-
-<h2 id="toc_2">nvm</h2>
-<https://github.com/creationix/nvm>
-<p>通过</p>
-
-<pre><code class="language-text">curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.6/install.sh | bash
-</code></pre>
-
-<p>或者</p>
-
-<pre><code class="language-text">wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.31.6/install.sh | bash
-</code></pre>
-
-<p>来安装NVM。</p>
-
-<p>安装完毕以后运行</p>
-
-<pre><code class="language-text">export NVM_DIR=&quot;$HOME/.nvm&quot;
-[ -s &quot;$NVM_DIR/nvm.sh&quot; ] &amp;&amp; . &quot;$NVM_DIR/nvm.sh&quot;
-</code></pre>
-
-<p>直接开始运行NVM。</p>
-
-<h2 id="toc_3">用NVM部署Node.js</h2>
-
-<p>在终端运行</p>
-
-<pre><code class="language-text">nvm install node
-</code></pre>
-
-<p>好了，现在可以装Hexo了！</p>
-
-<h2 id="toc_4">Hexo</h2>
-
-<p>输入</p>
-
-<pre><code class="language-text">npm install -g hexo-cli
-</code></pre>
-
-<p>大功告成！</p>
-
-<h1 id="toc_5">部署Hexo到Github上</h1>
-
-<h2 id="toc_6">为 Hexo 安装 Git 插件</h2>
-
-<pre><code class="language-text">npm install hexo-deployer-git --save
-</code></pre>
-
-<p>config.yml改为</p>
-
-<pre><code class="language-text">deploy:
-  type: git
-  repo: &lt;repository url&gt;
-  branch: [branch]
-  message: [message]
-</code></pre>
-
-<h2 id="toc_7">添加SSH key</h2>
-
-<blockquote>
-<p>添加key之后，github才知道修改文件的人是你哦。</p>
-</blockquote>
-
-<pre><code class="language-text">ssh-keygen -t rsa -C &quot;youremail@example.com&quot;
-</code></pre>
-
-<p>终端会显示在你的用户主目录下增加了<code>.ssh</code>目录和<code>id_rsa</code>,<code>id_rsa.pub</code>这两个文件。</p>
-
-<p>用cd命令跳转到.ssh目录以后ls列出目录下文件，</p>
-
-<pre><code class="language-text">more id_rsa.pub
-</code></pre>
-
-<p>即可看到pub文件中内容，将内容复制到</p>
-
-<p>GitHub--&gt;“Account settings”--&gt;“SSH Keys”--&gt;Add a SSH key。</p>
-
-<h2 id="toc_8">新建一个Github repository作为你的博客存放地</h2>
-
-<p>在Github新建repository，名称为</p>
-
-<pre><code class="language-text">your-username.github.io
-</code></pre>
-
-<p>cd到你本地所创建的hexo文件夹，然后执行</p>
-
-<pre><code class="language-text">$ git remote add origin git@github.com:你刚刚建好的repo
-</code></pre>
-
-<p>这样你的本地文件夹和就和Github上的repo建立起联系啦。</p>
-
-<h2 id="toc_9">迁移你的MD文档</h2>
-
-<p>如果你之前的博客都是Markdown文章，将它们复制到</p>
-
-<p><code>你的hexo文件夹/source/_post</code>里即可。</p>
-
-<p>注意hexo的frontmatter：<br/>
-<a href="https://hexo.io/docs/front-matter.html">https://hexo.io/docs/front-matter.html</a></p>
-
-<blockquote>
-<hr/>
-
-<p>title: Hello World<br/>
-date: 2013/7/13 20:46:25</p>
-
-<hr/>
-</blockquote>
-
-<h2 id="toc_10">push你的本地hexo文件夹到git上</h2>
-
-<pre><code class="language-text">hexo g
-hexo d
-</code></pre>
-
-<p>或者</p>
-
-<pre><code class="language-text">hexo g -d
-</code></pre>
-
-<h2 id="toc_11">在本地查看你的Hexo网站</h2>
-
-<pre><code class="language-text">hexo g
-hexo s
-</code></pre>
-
-<p>或者</p>
-
-<pre><code class="language-text">hexo g -s
-</code></pre>
-
-<h1 id="toc_12">一些注意事项</h1>
-
-<p>每次使用hexo之前要把NVM运行起来。</p>
-
-<p>执行</p>
-
-<pre><code class="language-text">export NVM_DIR=&quot;$HOME/.nvm&quot;
-[ -s &quot;$NVM_DIR/nvm.sh&quot; ] &amp;&amp; . &quot;$NVM_DIR/nvm.sh&quot;
-</code></pre>
-
-<p>即可。</p>
-
-<h1 id="toc_13">本文的参考网址：</h1>
-
-<p><a href="https://hexo.io/">https://hexo.io/</a></p>
-
-                        
-                      </div>
-                  </div>
-                </a>
-                <div class="read-more clearfix">
-                  <div class="more-left left">
-                  
-                    <span class="date">2016/08/31</span>
+                    <span class="date">2015/08/01</span>
                     <span>posted in&nbsp;</span> 
           				  
-          					    <span class="posted-in"><a href='%E6%AD%A3%E7%BB%8F.html'>正经</a></span>
+          					    <span class="posted-in"><a href='%E5%88%AB%E5%A4%84.html'>别处</a></span>
           				   
                   </div>
                   <div class="more-right right">
@@ -359,7 +145,7 @@ hexo s
 			  </div>
 			  <div class="large-6 columns">
 			<p class="text-right" style="padding-top:25px;">
-			 <a href="all_1.html">&raquo; Next Page</a> 
+			
 			</p>
 			  </div>
 			</div>
